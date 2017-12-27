@@ -21,14 +21,17 @@ set -e
 DEVICE=x2
 VENDOR=leeco
 
-FILE=LE_X2_X820-CN-FN-FEXCNFN5902303111S-5.9.023S
-REMOTE=http://g3.letv.cn/219/46/52/letv-hdtv/0/upload/tmp/20170412134536641
+FILE=LE_X2_X820-CN-FN-FEXCNFN5902605092S-5.9.026S
+REMOTE=https://drive.google.com/file/d/0BxPg20xeuX4JekZEcjNKWEpCcEk
+
+#FILE=LE_X2_X820-CN-FN-FEXCNFN5902303111S-5.9.023S
+#REMOTE=http://g3.letv.cn/219/46/52/letv-hdtv/0/upload/tmp/20170412134536641
 MY_DIR="${BASH_SOURCE%/*}"
 if [[ ! -d "$MY_DIR" ]]; then MY_DIR="$PWD"; fi
 
 ROOT="$MY_DIR"/../../..
 
-HELPER="$ROOT"/vendor/blobscript/extract_utils.sh
+HELPER="$ROOT"/vendor/carbon/build/tools/extract_utils.sh
 if [ ! -f "$HELPER" ]; then
     echo "Unable to find helper script at $HELPER"
     exit 1
